@@ -1,0 +1,11 @@
+/*
+ * Entrada do Tailwind CLI standalone — NÃO é carregado pelo site.
+ * O site usa o arquivo gerado: tailwind.css
+ *
+ * Para regerar depois de mudar classes no index.html:
+ *   ./tailwindcss.exe -i tailwind.input.css -o tailwind.css --minify
+ */
+
+/* source(none): só lê o index.html (sem isso ele varre a pasta toda, incluindo o CLAUDE.md) */
+@import "tailwindcss" source(none);
+@source "./index.html";

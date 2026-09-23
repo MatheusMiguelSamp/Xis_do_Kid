@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xis do Gaúcho Tchê</title>
+
+    <!-- Google Fonts: Holtwood One SC (títulos, 400) + Inter (textos, 600 normal e itálico) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Holtwood+One+SC&family=Inter:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+
+    <!-- Tailwind: CSS estático gerado pelo CLI standalone (ver tailwind.input.css para regerar) -->
+    <link rel="stylesheet" href="tailwind.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <header>
+        <nav class="relative">
+            <!-- Listras da bandeira do RS -->
+            <div class="h-[30px] md:h-[50px] bg-[#00AB4D]"></div>
+            <div class="h-[30px] md:h-[50px] bg-[#EE312F]"></div>
+            <div class="h-[30px] md:h-[50px] bg-[#FFCB05]"></div>
+
+            <!-- Conteúdo sobreposto às listras: coluna do meio centralizada na página e na faixa vermelha -->
+            <div class="absolute inset-0 grid grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center px-4">
+                <img src="imagens/Polar 1.png" alt="Cerveja Polar"
+                     class="justify-self-center h-[70px] w-[40px] md:h-[90px] md:w-[52px] object-cover">
+
+                <h1 class="font-['Holtwood_One_SC'] font-normal text-[12px] md:text-[22px] leading-none text-[#FFFFFF] text-center">
+                    Xis do Gaúcho Tchê
+                </h1>
+
+                <!-- Ícone + texto formam um único link clicável -->
+                <!-- TODO: link real do iFood -->
+                <a href="#" target="_blank" rel="noopener noreferrer"
+                   class="justify-self-center flex flex-col items-center text-[#FFFFFF]">
+                    <img src="imagens/Logo do ifood.png" alt="iFood"
+                         class="w-[28px] md:w-[60px] h-auto">
+                    <span class="text-[11px] md:text-[26px] leading-none">Xis do Kid</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ===== HERO ===== -->
+        <!-- overflow-x-clip: a sombra das fotos vaza pros lados no mobile e criaria scroll horizontal -->
+        <section class="hero overflow-x-clip">
+            <!-- Boas-vindas + título (sobre a área branca do background) -->
+            <div class="px-4 pt-8 pb-6 md:pt-10 xl:pt-[47px] xl:pb-0 text-center text-[#000000]">
+                <p class="italic text-[18px] md:text-[20px] xl:text-[24px] leading-[1.2]">
+                    Sejam Bem-vindos<br>ao<br>Xis do gaúcho tchê
+                </p>
+                <h2 class="mt-6 xl:mt-[38px] font-['Holtwood_One_SC'] font-normal text-[22px] md:text-[28px] xl:text-[32px] leading-[1.2]">
+                    O MELHOR PRENSADO DA REGIÃO
+                </h2>
+            </div>
+
+            <!-- Conteúdo sobre a área verde -->
+            <div class="hero-body flex flex-col gap-16 px-4 pb-16 xl:gap-[215px] xl:px-0 xl:pb-[121px] xl:mt-[195px] xl:ml-[18.8%] xl:w-[63.6%] text-[#FFFFFF] text-center">
+
+                <!-- Linha 1: mobile = texto e depois foto | desktop = foto à esquerda, texto à direita -->
+                <div class="flex flex-col-reverse items-center gap-8 xl:flex-row xl:gap-[9%] xl:pl-[5%]">
+                    <div class="relative w-full max-w-[394px] aspect-[394/296] xl:w-[32.5%] xl:max-w-none">
+                        <!-- PNG exportado do Figma já com sombra: a foto em si é só a parte opaca, o resto vaza pra fora da caixa -->
+                        <img src="imagens/XDeCimaEsquerda.png" alt="Xis gaúcho recheado servido no prato"
+                             class="absolute max-w-none w-[149.49%] left-[-24.62%] top-[-6.08%]">
+                    </div>
+                    <div class="relative z-10 max-w-[652px] xl:flex-1">
+                        <h3 class="font-['Holtwood_One_SC'] font-normal text-[18px] md:text-[22px] xl:text-[24px] leading-[1.2]">
+                            O Verdadeiro Sabor do <span class="whitespace-nowrap">X-Gaúcho!</span>
+                        </h3>
+                        <div class="mt-6 xl:mt-[32px] space-y-[1.2em] text-[16px] md:text-[18px] xl:text-[20px] leading-[1.2]">
+                            <p>Se você é daqueles que não aceita lanche sem sustância, chegou ao lugar certo! Aqui no Xis do gaúcho tchê, a chapa não para e o sabor é coisa séria.</p>
+                            <p>Cada X-Gaúcho que sai daqui é um monstro de sabor, com pão macio, carne suculenta, queijo derretendo e aquele tempero que só quem entende de lanche sabe fazer.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Linha 2: mobile = texto e depois foto | desktop = texto à esquerda, foto à direita -->
+                <div class="flex flex-col items-center gap-8 xl:flex-row xl:gap-[7.5%] xl:pr-[6.5%]">
+                    <div class="relative z-10 max-w-[652px] xl:flex-1">
+                        <h3 class="font-['Holtwood_One_SC'] font-normal text-[18px] md:text-[22px] xl:text-[24px] leading-[1.2]">
+                            <span class="whitespace-nowrap">X-Calota:</span> O Gigante da Chapa!
+                        </h3>
+                        <div class="mt-6 xl:mt-[32px] space-y-[1.2em] text-[16px] md:text-[18px] xl:text-[20px] leading-[1.2]">
+                            <p>Se o seu negócio é lanche grande, prensado e recheado até a última mordida, o X-Calota é pra você!</p>
+                            <p>Aqui o pão vai para a chapa e fica dourado e crocante, enquanto por dentro a mágica acontece: camadas generosas de carne suculenta, queijo derretendo sem dó e aquele bacon crocante que faz toda a diferença.</p>
+                            <p>Um lanche PESADO, caprichado e feito para matar sua fome de verdade!</p>
+                            <p>Tá esperando o quê? Vem garantir o seu!</p>
+                        </div>
+                    </div>
+                    <div class="relative w-full max-w-[398px] aspect-[398/360] xl:w-[32.5%] xl:max-w-none">
+                        <img src="imagens/XDeBaixoDireita.png" alt="X-Calota prensado na chapa, embrulhado em papel alumínio"
+                             class="absolute max-w-none w-[158.54%] left-[-29.15%] top-[-6.11%]">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===== CARDÁPIOS ===== -->
+        <!-- relative: pinta por cima da sombra da última foto do Hero, que vaza pra baixo -->
+        <section class="relative" aria-labelledby="cardapio-titulo">
+            <!-- Linhas escuras em cima e embaixo separando as partes da página: 2px no celular, 5px no computador -->
+            <div class="flex items-center justify-center bg-[#FFFFFF] border-y-2 border-[#000000] md:border-y-[5px] px-4 py-5 md:py-7 xl:h-[110px] xl:py-0">
+                <h2 id="cardapio-titulo" class="font-['Holtwood_One_SC'] font-normal text-[24px] md:text-[30px] xl:text-[36px] leading-[1.2] text-[#000000] text-center">
+                    Nosso Cardápio:
+                </h2>
+            </div>
+
+            <div class="bg-linear-to-b from-[#EE312F] to-[#881C1B] py-10 md:py-16 xl:pt-[134px] xl:pb-[104px]">
+                <!-- Mobile: carrossel com swipe (scroll-snap, só CSS) — um cardápio por tela, inteiro, sem cortar nada.
+                     A largura é limitada pela altura da tela (85svh) pra imagem caber inteira na vertical também.
+                     Cada slide tem exatamente a largura da tela (margem lateral fica dentro dele), então nunca aparece pedaço do vizinho.
+                     Tablet/desktop (md+): os dois lado a lado.
+                     Tocar/clicar em um cardápio abre o pop-up de tela cheia (script no fim da página). -->
+                <div class="menu-carousel flex overflow-x-auto snap-x snap-mandatory md:overflow-visible md:justify-center md:items-start md:gap-[60px] md:px-4">
+                    <div class="flex shrink-0 snap-center justify-center w-full px-4 md:px-0 md:w-[calc(50%-30px)] md:max-w-[597px]">
+                        <button type="button" class="menu-open block w-[min(100%,calc(85svh*0.72))] md:w-full cursor-zoom-in" aria-label="Ampliar cardápio de lanches">
+                            <img src="imagens/CardapioLanche.jpeg" alt="Cardápio de lanches: Xis Tudo, Xis Moda da Casa, Xis Salada, Xis Duplo, Xis Carne com Bacon, Xis Carne com Calabresa, Xis Frango, Xis Frango com Bacon, Xis Frango com Calabresa, Xis Calotinha e Xis Calota, com preços"
+                                 class="block w-full h-auto">
+                        </button>
+                    </div>
+                    <div class="flex shrink-0 snap-center justify-center w-full px-4 md:px-0 md:w-[calc(50%-30px)] md:max-w-[597px]">
+                        <button type="button" class="menu-open block w-[min(100%,calc(85svh*0.72))] md:w-full cursor-zoom-in" aria-label="Ampliar cardápio de bebidas">
+                            <img src="imagens/CardapioBebida.jpeg" alt="Cardápio de bebidas: refrigerantes Coca-Cola, Guaraná e Fanta, cervejas Skol, Amstel, Brahma, Heineken, Budweiser e Polar, com preços"
+                                 class="block w-full h-auto">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CONTATOS ===== -->
+        <section aria-label="Contatos">
+            <!-- Faixa de links: mesma separação da faixa do cardápio (2px celular / 5px computador) -->
+            <div class="flex flex-col items-center justify-center gap-2 bg-[#FFFFFF] border-y-2 border-[#000000] md:border-y-[5px] md:flex-row md:gap-[120px] xl:gap-[200px] px-4 py-3 md:py-2 xl:h-[110px] xl:py-0 text-[#000000] italic">
+                <div class="flex items-center gap-3 xl:gap-5">
+                    <p class="text-[20px] md:text-[26px] xl:text-[36px] leading-[1.2]">Chamar no Ifood:</p>
+                    <!-- TODO: link real do iFood (mesmo da navbar) -->
+                    <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Pedir pelo iFood">
+                        <img src="imagens/LogoIfoodPreta.png" alt="iFood" class="w-[56px] md:w-[72px] xl:w-[100px] h-auto">
+                    </a>
+                </div>
+                <div class="flex items-center gap-3 xl:gap-5">
+                    <p class="text-[20px] md:text-[26px] xl:text-[36px] leading-[1.2]">Ou no Whatsapp:</p>
+                    <!-- WhatsApp: +55 (47) 99130-5568 -->
+                    <a href="https://wa.me/5547991305568" target="_blank" rel="noopener noreferrer" aria-label="Chamar no WhatsApp">
+                        <img src="imagens/WhatsappLogoColorido.png" alt="WhatsApp" class="w-[56px] md:w-[72px] xl:w-[100px] h-auto">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Bloco da Polar -->
+            <div class="bg-linear-to-b from-[#FFCB05] to-[#FFD73F] px-4 py-12 md:py-16 xl:py-[150px] text-[#000000]">
+                <div class="flex flex-col items-center gap-8 xl:flex-row xl:justify-center xl:gap-[156px]">
+                    <!-- O PNG tem muita área transparente dos lados: a caixa tem a proporção só da lata e o object-position centraliza nela -->
+                    <img src="imagens/Polar 2.png" alt="Lata de cerveja Polar 473 ml"
+                         class="shrink-0 h-[300px] md:h-[400px] xl:h-[548px] w-auto aspect-[217/548] object-cover object-[54.3%_50%]">
+
+                    <div class="w-full max-w-[821px] text-center">
+                        <h2 class="font-['Holtwood_One_SC'] font-normal text-[22px] md:text-[30px] xl:text-[36px] leading-[1.2] md:text-left">
+                            Aqui Tem Polar
+                        </h2>
+                        <p class="mt-2 md:mt-[20px] font-['Holtwood_One_SC'] text-[22px] md:text-[30px] xl:text-[36px] leading-[1.2] md:text-right">
+                            Exclusividade Gaúcha
+                        </p>
+
+                        <div class="mt-6 md:mt-[40px] space-y-[16px] italic text-[17px] md:text-[22px] xl:text-[28px] leading-[1.2] max-w-[810px] mx-auto">
+                            <p>Se você é fã de um X-Gaúcho de respeito, tem que acompanhar com uma cerveja raiz.</p>
+                            <p>E aqui no Xis do gaúcho tchê, você encontra a lendária Polar – uma raridade em Santa Catarina!</p>
+                        </div>
+
+                        <h3 class="mt-8 md:mt-[42px] font-['Holtwood_One_SC'] font-normal text-[18px] md:text-[24px] xl:text-[30px] leading-[1.55] max-w-[780px] mx-auto">
+                            Refrescante, encorpada e do jeito que uma boa cerveja tem que ser!
+                        </h3>
+                        <p class="mt-3 italic text-[18px] md:text-[24px] xl:text-[30px] leading-[1.2] max-w-[810px] mx-auto">
+                            Não perca a chance de provar essa exclusividade enquanto saboreia o melhor lanche da cidade.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== HORÁRIOS E LOCALIZAÇÃO ===== -->
+        <section aria-labelledby="local-titulo">
+            <!-- Faixa do título: mesma separação das outras partes (2px celular / 5px computador) -->
+            <div class="flex items-center justify-center bg-[#FFFFFF] border-y-2 border-[#000000] md:border-y-[5px] px-4 py-5 md:py-7 xl:h-[110px] xl:py-0">
+                <h2 id="local-titulo" class="font-['Holtwood_One_SC'] font-normal text-[20px] md:text-[30px] xl:text-[36px] leading-[1.2] text-[#000000] text-center">
+                    Horários e localização:
+                </h2>
+            </div>
+
+            <div class="bg-linear-to-b from-[#FF3C00] to-[#7B0000] px-4 pt-12 pb-10 md:pt-16 xl:pt-[136px] xl:pb-[60px] text-[#FFFFFF] text-center">
+                <div class="flex flex-col items-center gap-10 xl:flex-row xl:justify-center xl:gap-[126px]">
+                    <!-- Quadro-negro com os horários (o texto já vem desenhado na imagem; o alt repete ele) -->
+                    <img src="imagens/Horários.png"
+                         alt="Horários: de segunda a sábado, das 18:00 até às 00:00. Fechado aos domingos."
+                         class="shrink-0 w-[240px] md:w-[320px] xl:w-[430px] h-auto">
+
+                    <div class="w-full max-w-[670px] italic">
+                        <p class="text-[22px] md:text-[32px] xl:text-[40px] leading-[1.1]">
+                            Rua Bahia, 3144<br>
+                            Ou clique na localização abaixo
+                        </p>
+                        <a href="https://www.google.com/maps/search/?api=1&amp;query=Rua+Bahia%2C+3144%2C+Blumenau+-+SC"
+                           target="_blank" rel="noopener noreferrer" class="mt-3 block" aria-label="Abrir a localização no Google Maps">
+                            <img src="imagens/Local.png" alt="Mapa: o food truck fica na Rua Bahia, ao lado do Super Ferreira"
+                                 class="block w-full h-auto">
+                        </a>
+                        <p class="mt-4 text-[22px] md:text-[32px] xl:text-[40px] leading-[1.1]">
+                            Ao lado do Super Ferreira
+                        </p>
+                    </div>
+                </div>
+
+                <p class="mt-12 xl:mt-[60px] font-['Holtwood_One_SC'] text-[24px] md:text-[32px] xl:text-[40px] leading-[1.2]">
+                    Estamos te esperando!
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pop-up de tela cheia dos cardápios: a imagem cabe inteira na tela (object-contain), nada fica de fora -->
+    <dialog id="menu-lightbox" class="menu-lightbox fixed inset-0 m-0 h-full w-full max-h-none max-w-none bg-[#000000]/90 p-4 pt-14 open:flex items-center justify-center" aria-label="Cardápio ampliado">
+        <button type="button" class="absolute top-2 right-4 text-[40px] leading-none text-[#FFFFFF]" aria-label="Fechar">&times;</button>
+        <img id="menu-lightbox-img" src="" alt="" class="max-h-full max-w-full object-contain">
+    </dialog>
+
+    <script>
+        // ===== CARDÁPIOS: pop-up de tela cheia =====
+        // Ao tocar/clicar num cardápio, copia a imagem dele pro <dialog> e abre como modal.
+        // Um swipe no carrossel não dispara "click", então arrastar não abre o pop-up por engano.
+        const menuLightbox = document.getElementById('menu-lightbox');
+        const menuLightboxImg = document.getElementById('menu-lightbox-img');
+
+        document.querySelectorAll('.menu-open').forEach((button) => {
+            button.addEventListener('click', () => {
+                const img = button.querySelector('img');
+                menuLightboxImg.src = img.src;
+                menuLightboxImg.alt = img.alt;
+                menuLightbox.showModal();
+            });
+        });
+
+        // Toque em qualquer lugar do pop-up (fundo, imagem ou X) fecha. O Esc fecha nativamente.
+        menuLightbox.addEventListener('click', () => menuLightbox.close());
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+/* ===== BASE ===== */
+/* Fonte padrão de texto do site: Inter semi-bold */
+body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+
+/* ===== NAVBAR ===== */
+/* Tudo feito com Tailwind no index.html */
+
+/* ===== HERO ===== */
+/*
+ * Background único: imagens/Green background 1.png (o verde da imagem é #00AB4D,
+ * o mesmo da navbar, então a cor sólida continua a forma sem emenda).
+ *
+ * Mobile/tablet: o título fica no branco e a imagem só aparece atrás do conteúdo,
+ * ampliada e alinhada à direita — assim a borda ondulada de cima continua visível,
+ * mas a "ponta branca" da esquerda do blob fica fora da tela e não some com o texto branco.
+ */
+.hero-body {
+    background-color: #00AB4D;
+    background-image: url("imagens/Green background 1.png");
+    background-repeat: no-repeat;
+    background-size: 180% auto;
+    /* Sobe a imagem ~19vw pra cortar o branco que sobra acima da onda */
+    background-position: right 0 top -19vw;
+    /* Empurra o conteúdo pra baixo da onda (o ponto mais baixo dela fica em ~16vw) */
+    padding-top: 22vw;
+}
+
+/* Desktop: igual ao Figma — a imagem cobre a seção inteira (título incluso) */
+@media (min-width: 1280px) {
+    .hero {
+        background-image: url("imagens/Green background 1.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .hero-body {
+        background: none;
+        padding-top: 0;
+    }
+}
+
+/* ===== CARDÁPIOS ===== */
+/* Esconde a barra de rolagem do carrossel no mobile (o swipe continua funcionando) */
+.menu-carousel {
+    scrollbar-width: none;
+}
+
+.menu-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+/* Trava a rolagem da página enquanto o pop-up do cardápio está aberto */
+html:has(.menu-lightbox[open]) {
+    overflow: hidden;
+}
